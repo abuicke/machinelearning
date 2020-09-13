@@ -6,12 +6,12 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
 # Load dataset
-df = pandas.read_csv("emobank.csv")
+emobank = pandas.read_csv("emobank.csv")
 
 # Split data set into train and test
-msk = numpy.random.rand(len(df)) < 0.8
-train = df[msk]
-test = df[~msk]
+msk = numpy.random.rand(len(emobank)) < 0.8
+train = emobank[msk]
+test = emobank[~msk]
 
 regr = LinearRegression()
 train_x = numpy.asanyarray(train[['V']])
