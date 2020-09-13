@@ -6,7 +6,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
 # Load dataset
-emobank = pandas.read_csv("emobank.csv")
+emobank = pandas.read_csv("data/emobank.csv")
 
 # Split data set into train and test
 msk = numpy.random.rand(len(emobank)) < 0.8
